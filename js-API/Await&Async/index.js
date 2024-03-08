@@ -4,4 +4,4 @@ async function callApi() {
   console.log(users);
 }
 
-callApi();
+callApi(); // コンソールで確認
