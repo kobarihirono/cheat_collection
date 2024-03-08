@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <p>添付ファイル</p>
+      <ul>
+        <li>・添付個数：最大3点</li>
+        <li>・ファイルサイズ：合計 最大30.0MB</li>
+        <li>・ファイル拡張子：png、jpg、pdfのみ</li>
+      </ul>
+    </div>
+    <div class="c-dropFile">
+      <div class="c-dropFile__inner">
+        <!-- ドラッグ&ドロップエリア -->
+        <p id="js-dropArea" class="c-dropFile__drop-area"></p>
+        <div class="c-dropFile__input">
+          <input
+            type="file"
+            name="uploadFile"
+            id="js-uploadFile"
+            class="c-dropFile__upload-file"
+          />
+          <img
+            class="c-dropFile__input-arrow"
+            src="https://codemingle.co.jp/wp-content/uploads/2024/01/arrow.png"
+          />
+          <div id="btnInputFile" class="c-dropFile__input-btn">
+            ここにファイルをドロップするか
+            <span id="js-fileInputSpan">参照</span>
+            してください
+          </div>
+        </div>
+        <!-- .c-dropFile__input -->
+      </div>
+    </div>
+    <!-- .c-dropFile -->
+    <!-- ファイル名を表示 -->
+    <p id="js-fileName" class="c-file-name"></p>
+    <script src="main.js"></script>
+  </body>
+</html>
