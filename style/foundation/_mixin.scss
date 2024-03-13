@@ -1,0 +1,34 @@
+// 絶対配置中央揃え
+@mixin center-pos {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// 汎用テキスト
+@mixin main-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2.6;
+}
+
+// ブレイクポイント（min-width）
+$mq-breakpoints: (
+    'sm': 501px,
+    'md': 801px,
+    'lg': 1101px,
+    'xl': 1280px
+) !default;
+
+@mixin mq($breakpoint: md, $rule: min) {
+    $breakpoint: map-get($mq-breakpoints, $breakpoint);
+
+    @if $rule ==max {
+        $breakpoint: $breakpoint - 1px;
+    }
+
+    @media screen and (#{$rule}-width: $breakpoint) {
+        @content;
+    }
+}
